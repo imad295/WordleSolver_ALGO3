@@ -1,4 +1,3 @@
-
 # WordleSolver_ALGO3
 # 🎮 Mon Jeu Wordle
 ![Description](featured-wordle-solver-tool.jpg)
@@ -20,6 +19,3 @@ Fonctionnalités principales :
 - Jouer au Wordle en tant qu'utilisateur humain.  
 - Solveur automatique qui devine le mot secret en utilisant un algorithme basé sur la fréquence des lettres.  
 - Benchmark automatique pour mesurer le nombre moyen d'essais nécessaires pour trouver les mots.
-
-
-
