@@ -1,14 +1,13 @@
+
 # WordleSolver_ALGO3
-Mini Project ALGO3 - Wordle game and solver in C 
-presenter par BARA imad eddine le leader et ALIM kamel le simple membre
-Wordle est un jeu de devinette de mots dans lequel un joueur dispose de six essais pour découvrir un mot secret de 5 lettres.
-Après chaque essai, le jeu donne un retour (feedback) :
+# 🎮 Mon Jeu Wordle
 
-🟩 Green : la lettre est correcte et bien placée.
+![Aperçu du jeu Wordle](https://raw.githubusercontent.com/ImadBara/Wordle-Game/main/images/wordle-preview.png)
 
-🟨 Yellow : la lettre existe dans le mot, mais n’est pas à la bonne position.
+Le joueur doit deviner un mot de 5 lettres en 6 essais maximum.  
+Chaque tentative donne un indice de couleur :
+- G🟩 Lettre correcte et bien placée  
+- Y🟨 Lettre correcte mais mal placée  
+- (vide)⬜ Lettre absente du mot
 
-⬜ Gray : la lettre n’apparaît pas dans le mot.
-
-![Logo GitHub](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
 
