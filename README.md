@@ -9,3 +9,6 @@ Après chaque essai, le jeu donne un retour (feedback) :
 🟨 Yellow : la lettre existe dans le mot, mais n’est pas à la bonne position.
 
 ⬜ Gray : la lettre n’apparaît pas dans le mot.
+
+![Logo GitHub](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
