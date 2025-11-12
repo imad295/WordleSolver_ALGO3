@@ -1,8 +1,7 @@
 
 # WordleSolver_ALGO3
 # 🎮 Mon Jeu Wordle
-
-![Aperçu du jeu Wordle](https://raw.githubusercontent.com/ImadBara/Wordle-Game/main/images/wordle-preview.png)
+![Description](featured-wordle-solver-tool.jpg)
 
 Le joueur doit deviner un mot de 5 lettres en 6 essais maximum.  
 Chaque tentative donne un indice de couleur :
