@@ -5,6 +5,13 @@
 #include <time.h>
 #include "wordle.h"
 
+#ifdef _WIN32
+#include <windows.h>
+#ifndef ENABLE_VIRTUAL_TERMINAL_PROCESSING
+#define ENABLE_VIRTUAL_TERMINAL_PROCESSING 0x0004
+#endif
+#endif
+
 char **dictionary = NULL;
 int dict_size = 0;
 
@@ -173,9 +180,16 @@ int solver_play_against(const char *target)
         compute_feedback(guess, target, colors);
         printf("Feedback: ");
         for (int i = 0; i < WORD_LEN; i++)
-            printf("[%c %c] ", colors[i] == GREEN ? 'G' : colors[i] == YELLOW ? 'Y'
-                                                                              : ' ',
-                   toupper(guess[i]));
+        {
+            printf("[");
+            if (colors[i] == GREEN)
+                printf("\x1b[42m\x1b[30m%c\x1b[0m", toupper(guess[i]));
+            else if (colors[i] == YELLOW)
+                printf("\x1b[43m\x1b[30m%c\x1b[0m", toupper(guess[i]));
+            else
+                printf("\x1b[100m\x1b[37m%c\x1b[0m", toupper(guess[i]));
+            printf("] ");
+        }
         printf("\n");
         if (strcmp(guess, target) == 0)
         {
@@ -215,9 +229,17 @@ double benchmark_all(int limit)
 void print_feedback(const char *guess, Color colors[])
 {
     for (int i = 0; i < WORD_LEN; i++)
-        printf("[%c %c] ", colors[i] == GREEN ? 'G' : colors[i] == YELLOW ? 'Y'
-                                                                          : ' ',
-               toupper(guess[i]));
+    {
+        printf("[");
+        // afficher la lettre en couleur
+        if (colors[i] == GREEN)
+            printf("\x1b[42m\x1b[30m%c\x1b[0m", toupper(guess[i]));
+        else if (colors[i] == YELLOW)
+            printf("\x1b[43m\x1b[30m%c\x1b[0m", toupper(guess[i]));
+        else
+            printf("\x1b[100m\x1b[37m%c\x1b[0m", toupper(guess[i]));
+        printf("] ");
+    }
     printf("\n");
 }
 
@@ -299,6 +321,21 @@ int main(int argc, char **argv)
         return 1;
     }
     printf("%d mots chargés (%d lettres)\n", loaded, WORD_LEN);
+    // Activer l'interprétation des séquences ANSI sous Windows (si disponible)
+#ifdef _WIN32
+    {
+        HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+        if (hOut != INVALID_HANDLE_VALUE)
+        {
+            DWORD dwMode = 0;
+            if (GetConsoleMode(hOut, &dwMode))
+            {
+                dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+                SetConsoleMode(hOut, dwMode);
+            }
+        }
+    }
+#endif
     while (1)
     {
         printf("\n-------bienvenue dans mon jeu wordle solver ");
