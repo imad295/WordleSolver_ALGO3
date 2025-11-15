@@ -14,10 +14,11 @@
 
 char **dictionary = NULL;
 int dict_size = 0;
-
+    //Ouvre le fichier texte contenant les mots
 int load_dictionary(const char *filename)
 {
     FILE *f = fopen(filename, "r");
+    //Lit chaque ligne
     if (!f)
     {
         perror("open dictionary");
@@ -29,13 +30,15 @@ int load_dictionary(const char *filename)
     while (fgets(buf, sizeof(buf), f))
     {
         buf[strcspn(buf, "\n")] = 0;
+     //Ne garde que les mots de longueur WORD_LEN
         if (strlen(buf) == WORD_LEN && dict_size < MAX_WORDS)
+     //Stocke les mots dans un tableau dictionary
             dictionary[dict_size++] = strdup(buf);
     }
     fclose(f);
     return dict_size;
 }
-
+//Vérifie si un mot existe dans le dictionnaire
 bool is_valid_word(const char *w)
 {
     for (int i = 0; i < dict_size; i++)
@@ -43,6 +46,7 @@ bool is_valid_word(const char *w)
             return true;
     return false;
 }
+//Libère toute la mémoire alloué
 void free_dictionary()
 {
     for (int i = 0; i < dict_size; i++)
@@ -51,7 +55,7 @@ void free_dictionary()
     dictionary = NULL;
     dict_size = 0;
 }
-
+//génère un tableau de couleurs pour chaque lettre
 void compute_feedback(const char *guess, const char *target, Color colors[])
 {
     int count[26] = {0};
@@ -83,7 +87,7 @@ static bool compatible(const char *cand, const char *guess, Color colors[])
             return false;
     return true;
 }
-
+//Filtrer les candidats en fonction du feedback
 int filter_candidates(char **cand, int size, const char *guess, Color colors[])
 {
     int newsize = 0;
@@ -100,7 +104,7 @@ int filter_candidates(char **cand, int size, const char *guess, Color colors[])
     free(tmp);
     return newsize;
 }
-
+//Copier tous les mots du dictionnaire
 char **build_candidates_copy(int *out_size)
 {
     char **cand = malloc(sizeof(char *) * dict_size);
@@ -109,7 +113,8 @@ char **build_candidates_copy(int *out_size)
     *out_size = dict_size;
     return cand;
 }
-
+//Calculer la fréquence d’apparition des lettres
+//Objectif : favoriser les mots avec des lettres fréquentes.
 static void letter_freq(char **cand, int size, int freq[26])
 {
     for (int i = 0; i < 26; i++)
@@ -128,7 +133,7 @@ static void letter_freq(char **cand, int size, int freq[26])
         }
     }
 }
-
+//Donner un score à chaque mot
 static int word_score(const char *w, int freq[26])
 {
     bool seen[26] = {0};
@@ -144,7 +149,7 @@ static int word_score(const char *w, int freq[26])
     }
     return s;
 }
-
+//Choisir le meilleur mot à deviner
 char *choose_guess(char **cand, int size)
 {
     if (size == 0)
@@ -242,7 +247,7 @@ void print_feedback(const char *guess, Color colors[])
     }
     printf("\n");
 }
-
+//
 void human_play()
 {
     srand(time(NULL));
