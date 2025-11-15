@@ -2,20 +2,39 @@
 # 🎮 Mon Jeu Wordle
 ![Description](featured-wordle-solver-tool.jpg)
 
-Le joueur doit deviner un mot de 5 lettres en 6 essais maximum.  
-Chaque tentative donne un indice de couleur :
-- 🟩 Lettre correcte et bien placée  
-- 🟨 Lettre correcte mais mal placée  
-- ⬜ Lettre absente du mot
-- # Wordle Solver
+Ce projet implémente un jeu Wordle complet ainsi qu'un solveur intelligent capable de deviner les mots en un nombre réduit d'essais. Le programme utilise un dictionnaire externe, calcule des feedbacks comme le vrai Wordle (vert, jaune, gris), et propose plusieurs modes d'utilisation.
 
-## Description du projet
+  # 🚀 Fonctionnalités
 
-Ce projet est un **solveur automatique pour le jeu Wordle**.  
-L'objectif est de deviner un mot secret de 5 lettres en un nombre minimal d'essais.  
-Le programme permet également de jouer en mode **humain**, où l'utilisateur essaie de deviner le mot, ou en mode **solveur automatique** pour tester la performance du solveur.
+1\ Mode Joueur : le joueur essaie de deviner un mot choisi aléatoirement.
 
-Fonctionnalités principales :  
-- Jouer au Wordle en tant qu'utilisateur humain.  
-- Solveur automatique qui devine le mot secret en utilisant un algorithme basé sur la fréquence des lettres.  
-- Benchmark automatique pour mesurer le nombre moyen d'essais nécessaires pour trouver les mots.
+2\ Mode Solveur : l'IA tente de deviner n'importe quel mot du dictionnaire.
+
+3\ Benchmark : mesure les performances du solveur sur les 100 premiers mots.
+
+  🎨 Couleurs ANSI pour simuler Wordle en console (vert, jaune, gris).
+
+  📁 Dictionnaire externe : facile à modifier.
+
+# ▶️ Compilation et exécution
+ Compiler : 
+   -----gcc main.c wordle.c -o wordle
+ 
+ Lancer le jeu : 
+   ------./wordle words.txt
+ # 🎯 Règles du jeu Wordle
+
+Le mot contient WORD_LEN lettres.
+
+À chaque essai :
+
+🟩 Vert : bonne lettre, bonne position.
+
+🟨 Jaune : bonne lettre, mauvaise position.
+
+⬜ Gris : lettre absente.
+
+Le joueur a MAX_GUESSES tentatives.
+# 📣 Auteur
+
+Projet réalisé par Imad Eddine Bara et Alim Kamel
