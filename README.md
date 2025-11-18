@@ -17,11 +17,11 @@ Ce projet implémente un jeu Wordle complet ainsi qu'un solveur intelligent capa
   📁 Dictionnaire externe : facile à modifier.
 
 # ▶️ Compilation et exécution
- Compiler : 
-   -----gcc main.c wordle.c -o wordle
+ ### Compiler : 
+ gcc main.c wordle.c -o wordle
  
- Lancer le jeu : 
-   ------./wordle words.txt
+### Lancer le jeu : 
+ ./wordle words.txt
  # 🎯 Règles du jeu Wordle
 
 Le mot contient WORD_LEN lettres.
