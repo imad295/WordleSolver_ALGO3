@@ -38,7 +38,7 @@ Le joueur a MAX_GUESSES tentatives.
 # 📣 Auteur
 
 Projet réalisé par Imad Eddine Bara et Alim Kamel
-# execution
+# 🧩execution
 ### 1. Mode Joueur (Deviner le mot secret) 
 L'utilisateur tente de deviner le mot secret en 6 essais.
   <img width="1290" height="594" alt="Capture d&#39;écran 2025-11-18 115817" src="https://github.com/user-attachments/assets/1d088adf-166b-48af-9bd3-8fad96585571" />
