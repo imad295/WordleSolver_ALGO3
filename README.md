@@ -7,11 +7,14 @@ Ce projet implémente un jeu Wordle complet ainsi qu'un solveur intelligent capa
 
   # 🚀 Fonctionnalités
 
-1\ Mode Joueur : le joueur essaie de deviner un mot choisi aléatoirement.
+ ### 1\ Mode Joueur : 
+le joueur essaie de deviner un mot choisi aléatoirement.
 
-2\ Mode Solveur : l'IA tente de deviner n'importe quel mot du dictionnaire.
+### 2\ Mode Solveur : 
+l'IA tente de deviner n'importe quel mot du dictionnaire.
 
-3\ Benchmark : mesure les performances du solveur sur les 100 premiers mots.
+### 3\ Benchmark : 
+mesure les performances du solveur sur les 100 premiers mots.
 
   🎨 Couleurs ANSI pour simuler Wordle en console (vert, jaune, gris).
 
