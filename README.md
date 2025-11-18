@@ -14,7 +14,7 @@ le joueur essaie de deviner un mot choisi aléatoirement.
 l'IA tente de deviner n'importe quel mot du dictionnaire.
 
 ### 3\ Benchmark : 
-mesure les performances du solveur sur les 100 premiers mots.
+mesure les performances du solveur sur les 10 premiers mots.
 
   🎨 Couleurs ANSI pour simuler Wordle en console (vert, jaune, gris).
 
@@ -22,7 +22,7 @@ mesure les performances du solveur sur les 100 premiers mots.
 
 # ▶️ Compilation et exécution
  ### Compiler : 
- gcc main.c wordle.c -o wordle
+ gcc wordle.c -o wordle
  
 ### Lancer le jeu : 
  ./wordle words.txt
