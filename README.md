@@ -1,6 +1,7 @@
 # WordleSolver_ALGO3
 # 🎮 Mon Jeu Wordle
-![Description](featured-wordle-solver-tool.jpg)
+![featured-wordle-solver-tool](https://github.com/user-attachments/assets/0a818433-ea8d-455e-92a2-ccf53889a440)
+
 
 Ce projet implémente un jeu Wordle complet ainsi qu'un solveur intelligent capable de deviner les mots en un nombre réduit d'essais. Le programme utilise un dictionnaire externe, calcule des feedbacks comme le vrai Wordle (vert, jaune, gris), et propose plusieurs modes d'utilisation.
 
