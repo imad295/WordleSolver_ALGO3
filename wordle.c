@@ -252,7 +252,7 @@ void human_play()
     char *target = dictionary[idx];
     char guess[64];
 
-    printf("\nDevinez le mot secret  (%d lettres) parmis ces 8 mots (messi,kroos,paris,kamel,ramos,milan,usthb,roben)\n", WORD_LEN);
+    printf("\nDevinez le mot secret  (%d lettres) \n", WORD_LEN);
     for (int t = 1; t <= MAX_GUESSES; t++)
     {
         printf("Essai %d> ", t);
