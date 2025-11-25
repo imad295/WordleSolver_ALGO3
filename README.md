@@ -42,10 +42,12 @@ Projet réalisé par Imad Eddine Bara et Alim Kamel
 # 🧩execution
 ### 1. Mode Joueur (Deviner le mot secret) 
 L'utilisateur tente de deviner le mot secret en 6 essais.
+<img width="1158" height="863" alt="Capture d&#39;écran 2025-11-19 104924" src="https://github.com/user-attachments/assets/9ab82c2c-f523-49f1-bc5a-59e670d8cd80" />
 
 
 ### 2. Mode Solveur (Le programme devine)
 
 Le programme utilise une stratégie pour trouver le mot secret avec le moins d'essais possible.
+<img width="988" height="528" alt="Capture d&#39;écran 2025-11-23 225959" src="https://github.com/user-attachments/assets/25cd7b4a-d4a9-4561-8c50-04e6aa73e5e6" />
 
 
