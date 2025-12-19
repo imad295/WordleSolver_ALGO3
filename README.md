@@ -5,18 +5,18 @@
 
 Ce projet implémente un jeu Wordle complet ainsi qu'un solveur intelligent capable de deviner les mots en un nombre réduit d'essais. Le programme utilise un dictionnaire externe, calcule des feedbacks comme le vrai Wordle (vert, jaune, gris), et propose plusieurs modes d'utilisation.
 
-  # 🚀 Fonctionnalités
+## 🎯 Objectif du Projet
+L'objectif est de fournir un outil capable de :
+1.  Permettre à un utilisateur de jouer à Wordle localement avec n'importe quel dictionnaire.
+2.  Résoudre des grilles externes (comme le NYT Wordle ou Sutom) en proposant les mots les plus probables grâce à un algorithme d'élimination par consistance.
+ ## 🚀 Fonctionnalités
 
- ### 1\ Mode Joueur : 
-le joueur essaie de deviner un mot choisi aléatoirement.
-
-### 2\ Mode Solveur : 
-l'IA tente de deviner n'importe quel mot du dictionnaire.
-
-  🎨 Couleurs ANSI pour simuler Wordle en console (vert, jaune, gris).
-
-  📁 Dictionnaire externe : facile à modifier.
-
+* **Mode Jeu Humain** : Devinez un mot choisi aléatoirement par l'ordinateur.
+* **Solveur Logique** : Un assistant intelligent qui utilise un algorithme de filtrage par consistance pour réduire les possibilités du dictionnaire en fonction de vos indices.
+* **Gestion de Dictionnaire** : Chargement dynamique de mots depuis un fichier texte.
+* **Interface Colorée** : Utilisation des codes ANSI pour un affichage vert/jaune/gris directement dans le terminal.
+* **Multiplateforme** : Compatible Windows (avec support VT100) et Linux/macOS.
+  
 # ▶️ Compilation et exécution
  ### Compiler : 
  gcc wordle.c -o wordle
