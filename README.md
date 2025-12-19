@@ -49,6 +49,8 @@ L'utilisateur tente de deviner le mot secret en 6 essais.
 Le programme utilise une stratégie pour trouver le mot secret avec le moins d'essais possible.
 
 <img width="1314" height="702" alt="Capture d&#39;écran 2025-12-19 155241" src="https://github.com/user-attachments/assets/f9d51eac-3f9d-460f-ad2f-e98ddcc22aeb" />
+<img width="1087" height="892" alt="Capture d&#39;écran 2025-12-19 211729" src="https://github.com/user-attachments/assets/08329e1c-5cf0-4653-9e4e-9edf008eb45d" />
+
 
 
 
